@@ -28,7 +28,7 @@ class User(db.Model):
 with app.app_context():
     db.create_all()
 
-u1= User(email= 'delldemo@origen.qa',password= "dell@123", full_name= 'Dell Demo', contact = "+923048852145")
+u1= User(email= 'nutanixdemo@origen.qa',password= "nutanix@123", full_name= 'Nutanix Demo', contact = "+923048852145")
 
 
 with app.app_context():
