@@ -19,7 +19,8 @@
                     colors: {
                         customYellow: '#FFB72C', 
                         customGrey: "#333",
-                        customGreyOne: '#808080'
+                        customGreyOne: '#808080',
+                        customPurple: '#7855FA'
                     },
                     spacing: {
                         '540': "33.75rem",
@@ -39,7 +40,7 @@
                         '236': '14.75rem'     
                     },
                     backgroundImage: {
-                        'custom-gradient': 'linear-gradient(90deg, #006CD2 0%, #00A3FF 94.24%)',
+                        'custom-gradient': 'linear-gradient(90deg, #000000 0%, #000000 94.24%)',
                         'cus-white': 'F7F7F7'
                     },
                 }
@@ -52,12 +53,13 @@
     <div class="flex flex-col md:flex-row items-center justify-center w-full gap-7 py-10 lg:py-0 lg:gap-md-gap px-20 md:pr-10">
         <div class="max-w-860 w-full flex flex-row items-center justify-center md:p-10">
             <div>
-                <img src="/static/images/origen-logo.png" alt="Origen Logo" class="w-full h-100">
+                <img src="static/images/nutanix.svg" alt="nutanix Logo" class="hidden md:block w-full h-full mt-64">
+                <img src="static/images/main-nutanix-logo.svg" alt="nutanix Logo" class="block md:hidden w-full h-full">
             </div>
         </div>
 
         <div class="w-full md:max-w-540 bg-custom-gradient text-white py-20 px-7 md:p-10 rounded-custom-xl">
-            <h2 class="text-lg md:text-2xl mb-1">Welcome to <span class="text-customYellow font-extrabold">Origen Custom AI Demos</span>
+            <h2 class="text-lg md:text-2xl mb-4">Welcome to <span class="font-extrabold">Nutanix Enterprise AI LLM Demo</span>
             </h2>
             <h1 class="text-3xl font-bold mb-10 md:mb-12">Sign in</h1>
             {% with messages = get_flashed_messages(with_categories=true) %}
@@ -87,9 +89,14 @@
                     <p class="text-sm flex gap-1 md:gap-0 mt-7 md:mt-0 md:flex-col font-normal">Don’t have an Account? <a href="{{ url_for('signup') }}"
                             class="text-white font-bold  underline">Sign up</a></p>
                     <button type="submit"
-                        class="bg-customYellow md:max-w-236 w-full text-customGrey py-4 px-6 text-base rounded-lg font-medium ">Sign In</button>
+                        class="bg-customPurple md:max-w-236 w-full text-white py-4 px-6 text-base rounded-lg font-medium ">Sign In</button>
                 </div>
             </form>
+        </div>
+        <div class="max-w-860 w-full flex flex-row items-center justify-center md:p-10  md:hidden">
+            <div>
+                <img src="static/images/powerbyorigen.svg" alt="power by origen Logo" class="block w-full h-full">
+            </div>
         </div>
     </div>
 </body>
